@@ -1,0 +1,13 @@
+name: Python Syntax Check
+
+on: [push]
+
+jobs:
+  check-python:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run Python Syntax Check
+        run: python -m py_compile hello.py
